@@ -1,0 +1,209 @@
+@use "sass:map";
+@import './../../styles/variables';
+
+.main{
+    max-width: 99vw;
+    
+    .primary{
+        background-position: top;
+        background-size: cover;
+        background-repeat: no-repeat;        
+        min-height: 130vh;
+        position: relative;
+        .bar1{
+            position: absolute;
+            top:0;
+            right: -52px;
+            min-width: 20px;
+            min-height: 140px;
+        }
+        .bar2{
+            position: absolute;
+            top: 0px;
+            right: -30px;
+            min-width: 20px;
+            min-height: 70px;
+        }
+    }
+    
+    
+    .right{  
+        flex: 1;  
+        .item-menu{
+            text-decoration: underline;
+        }
+        .title{
+            font-family: Basel;
+            font-size: 50pt;
+            font-weight: 900;
+            letter-spacing: 0em;
+            line-height: 1em;
+            max-width: 200px;    
+        } 
+    }
+
+    
+
+    .image100{
+        background-size: 100%;
+        background-position: center center;
+    }
+
+    .img1{
+        min-height: 500px;
+    }
+    .img2{
+        min-height: 500px;
+        background-position: 0;
+
+    }
+
+    .img3{
+        min-height: 800px;
+        background-position: 0;
+
+    }
+    .image-left{
+        background-position: -80px 0px;
+    }
+
+    .images{
+        background-size: 115%;
+        position: relative;
+        cursor: pointer;
+        h1{
+            position: absolute;
+            right: 60px;
+            bottom: -100px;
+        }
+        .shadow1{
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgb(0, 0, 0);
+            opacity: .4;
+            min-width: 100%;
+            min-height: 1000px;
+        }
+    }
+
+    .images:hover{
+        animation-duration: .500s;
+        animation-name: imageSizeUp;
+        animation-fill-mode: forwards;
+    }
+
+    .images:not( :hover ){
+        animation-duration: .500s;
+        animation-name: imageSizeDowm;
+        animation-fill-mode: forwards;
+    }
+
+    .images:hover .shadow1{
+        animation-duration: .500s;
+        animation-name: opacityDown;
+        animation-fill-mode: forwards;
+    }
+
+    .images:not( :hover ) .shadow1{
+        animation-duration: .500s;
+        animation-name: imageSizeDowm;
+        animation-fill-mode: forwards;
+    }
+
+    .images:hover h1{
+        animation-duration: .500s;
+        animation-name: textUp;
+        animation-fill-mode: forwards;
+    }
+
+    .images:not( :hover ) h1{
+        animation-duration: .500s;
+        animation-name: textDown;
+        animation-fill-mode: forwards;
+    }
+
+    
+
+    
+}
+
+@keyframes opacityUp {
+  0% { opacity: .4 }  
+  100% { opacity: 0 }
+}
+
+@keyframes opacityDown {
+  0% { opacity: 0 }  
+  100% { opacity: .4 }
+}
+
+@keyframes imageSizeUp {
+  0% { background-size: 120% }  
+  100% { background-size: 130% }
+}
+
+@keyframes imageSizeDowm {
+  0% { background-size: 130% }  
+  100% { background-size: 120% }
+}
+
+@keyframes textUp {
+  0% { bottom: -100px }  
+  100% { bottom: 60px }
+}
+
+@keyframes textDown {
+  0% { bottom: 60px }  
+  100% { bottom: -100px }
+}
+
+
+
+footer{
+    position: relative;
+    background-color: rgba($color: map.get($color, color2), $alpha: 1.0);
+    max-width: 100vw !important;
+    
+    .sombra{
+        background-color: rgba(0, 0, 0, .1);
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-width: 100vw;
+        min-height: 100vh;
+        z-index: 2;
+    }
+    
+    .imagefooter{
+        min-height: 100vh;
+        min-width: 500px;
+        position: absolute;
+        top: 0;
+        right: 100px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: 1;
+    }
+    .footer-content{
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-width: 100vw;
+        min-height: 100vh;
+        z-index: 3;
+    }
+    .text-copy{
+        margin-top: 200px;
+    }
+    .listul{
+        text-decoration: none;
+        cursor: pointer;
+        line-height: 20px;
+    }
+
+    .listul li:hover{
+        text-decoration: underline;
+    }
+}
+

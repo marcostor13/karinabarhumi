@@ -1,0 +1,23 @@
+@font-face {
+    font-family: Basel;
+    src: 
+         url("/assets/fuentes/basel/Web/Basel-Regular-Demo.eot?") format("eot"),
+		 url("/assets/fuentes/basel/Web/Basel-Regular-Demo.woff") format("woff"),
+		 url("/assets/fuentes/basel/Web/Basel-Regular-Demo.ttf") format("truetype"),
+		 url("/assets/fuentes/basel/Web/Basel-Regular-Demo.svg#Basel") format("svg");
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: BaselBold;
+    src: 
+         url("/assets/fuentes/basel/Web/Basel-Bold-Demo.eot?") format("eot"),
+		 url("/assets/fuentes/basel/Web/Basel-Bold-Demo.woff") format("woff"),
+		 url("/assets/fuentes/basel/Web/Basel-Bold-Demo.ttf") format("truetype"),
+		 url("/assets/fuentes/basel/Web/Basel-Bold-Demo.svg#Basel") format("svg");
+    font-style: normal;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+}

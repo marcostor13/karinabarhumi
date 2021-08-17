@@ -1,0 +1,88 @@
+@use "sass:map";
+@import 'variables';
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@100;400;900&display=swap');
+
+*{
+  font-family: Basel;
+}
+
+body{
+  overflow-x: hidden;
+}
+
+
+@for $i from 1 through 4 {
+  .bg-color#{$i} {
+    background-color: map.get($color, color+$i);
+  }
+}
+
+@for $i from 1 through 4 {
+  .text-color#{$i} {
+    color: map.get($color, color+$i);
+  }
+}
+
+@for $i from 1 through 9 {
+  .font-#{$i*100} {
+    font-weight: $i*100;
+  }
+}
+
+@for $i from 1 through 100 {
+  .f-#{$i} {
+    font-size: $i+pt;
+  }
+}
+
+.font2{
+  font-family: 'Fira Sans Condensed', sans-serif !important;
+}
+
+.image{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.cursor{
+  cursor:pointer;
+}
+
+::-webkit-scrollbar-track {
+  width: 10px;      /* color of the tracking area */
+}
+
+::-webkit-scrollbar {
+    width: 10px;     /* Tamaño del scroll en vertical */
+    height: 10px;    /* Tamaño del scroll en horizontal */
+    // display: none;  /* Ocultar scroll */
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: map.get($color, color2);
+    border-radius: 4px;
+}
+
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #837e7e;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Cambiamos el fondo cuando esté en active */
+::-webkit-scrollbar-thumb:active {
+    background-color: #999999;
+}
+
+::-webkit-scrollbar-track {
+    background: #e1e1e1;
+    border-radius: 4px;
+}
+
+/* Cambiamos el fondo cuando esté en active o hover */
+::-webkit-scrollbar-track:hover,
+::-webkit-scrollbar-track:active {
+  background: #d4d4d4;
+}

@@ -1,0 +1,12 @@
+/* Webfont: Basel-Bold-Demo */@font-face {
+    font-family: 'BaselDemo';
+    src: url('Basel-Bold-Demo.eot'); /* IE9 Compat Modes */
+    src: url('Basel-Bold-Demo.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('Basel-Bold-Demo.woff') format('woff'), /* Modern Browsers */
+         url('Basel-Bold-Demo.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('Basel-Bold-Demo.svg#Basel-Bold-Demo') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+}
+
